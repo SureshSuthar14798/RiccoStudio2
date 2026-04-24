@@ -19,17 +19,15 @@ function AnimatedCounter({ value, suffix, duration = 2, isAutoChanging = false }
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
-  // Auto-changing digit feature
+  // Auto-incrementing feature
   useEffect(() => {
     if (isAutoChanging && isInView) {
       const interval = setInterval(() => {
-        const variation = Math.floor(Math.random() * 3) - 1 // -1, 0, or 1
-        const newValue = Math.max(95, Math.min(100, value + variation))
-        setDisplayValue(newValue)
+        setDisplayValue(prev => prev + 1)
       }, 5000)
       return () => clearInterval(interval)
     }
-  }, [isAutoChanging, isInView, value])
+  }, [isAutoChanging, isInView])
 
   useEffect(() => {
     if (isInView) {
@@ -224,7 +222,7 @@ export default function Stats() {
                       value={stat.value} 
                       suffix={stat.suffix} 
                       duration={2} 
-                      isAutoChanging={isLastStat}
+                      isAutoChanging={true}
                     />
                     {isLastStat && (
                       <motion.div

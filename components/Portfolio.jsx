@@ -122,9 +122,9 @@ export default function Portfolio() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setActiveFilter(category)}
-                className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+                className={`px-6 py-2 rounded-full font-medium transition-all shadow-md duration-300 ${
                   activeFilter === category
-                    ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg'
+                    ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white'
                     : 'bg-white/80 backdrop-blur-md border border-white/30 text-slate-700 hover:bg-white'
                 }`}
               >

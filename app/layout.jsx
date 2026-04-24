@@ -1,5 +1,6 @@
 import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
+import FloatingButtons from '../components/FloatingButtons'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.variable} ${poppins.variable} font-sans antialiased`}>
         {children}
+        <FloatingButtons />
       </body>
     </html>
   )

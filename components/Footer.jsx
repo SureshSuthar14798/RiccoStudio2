@@ -54,7 +54,7 @@ export default function Footer() {
               viewport={{ once: true }}
             >
               <h3 className="text-3xl font-bold text-gradient mb-4 font-poppins">
-                Ricco
+                RiccoStudio
               </h3>
               <p className="text-slate-400 leading-relaxed mb-6">
                 최첨단 기술과 혁신적인 솔루션으로 디지털 경험의 미래를 구축합니다.

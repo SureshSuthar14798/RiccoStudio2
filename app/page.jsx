@@ -10,6 +10,7 @@ import Portfolio from '../components/Portfolio'
 import TechStack from '../components/TechStack'
 import Stats from '../components/Stats'
 import Testimonials from '../components/Testimonials'
+import CompanyOverview from '../components/CompanyOverview'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
@@ -44,6 +45,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <CompanyOverview />
       <Services />
       <Portfolio />
       <TechStack />

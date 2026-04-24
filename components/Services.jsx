@@ -117,7 +117,7 @@ export default function Services() {
                   scale: 1.03,
                   boxShadow: '0 30px 60px -12px rgba(0, 0, 0, 0.2)'
                 }}
-                className="glass-card rounded-2xl p-6 group relative overflow-hidden transition-all duration-300 border border-white/40"
+                className="glass-card rounded-2xl p-6 group relative overflow-hidden transition-all duration-300 border border-white/40 h-full flex flex-col"
               >
                 {/* Animated Border Gradient */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-15 transition-opacity duration-300`} />
@@ -125,24 +125,24 @@ export default function Services() {
                 {/* Glow Effect */}
                 <div className={`absolute -inset-1 bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-20 blur-2xl transition-opacity duration-300`} />
                 
-                <div className="relative z-10">
+                <div className="relative z-10 flex flex-col h-full">
                   <motion.div
                     whileHover={{ rotate: 360, scale: 1.15 }}
                     transition={{ duration: 0.6 }}
-                    className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-5 shadow-lg group-hover:shadow-2xl group-hover:shadow-${service.color.split('-')[1]}-500/40 transition-all duration-300`}
+                    className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-5 shadow-lg group-hover:shadow-2xl group-hover:shadow-${service.color.split('-')[1]}-500/40 transition-all duration-300 flex-shrink-0`}
                   >
                     <service.icon className="w-7 h-7 text-white" />
                   </motion.div>
                   
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 font-poppins group-hover:text-indigo-600 transition-colors">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 font-poppins group-hover:text-indigo-600 transition-colors flex-shrink-0">
                     {service.title}
                   </h3>
                   
-                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
                     {service.description}
                   </p>
                   
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 flex-shrink-0">
                     {service.features.map((feature) => (
                       <motion.li 
                         key={feature} 
